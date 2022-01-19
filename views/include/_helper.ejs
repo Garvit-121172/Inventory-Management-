@@ -1,0 +1,36 @@
+<!-- Looping over data to form JSOn for CSV -->
+for(let i=0;i<myOrders.length;i++){
+    csvData.push({ 
+     "ItemName" :myOrders[i].orderItem.itemName,
+     "BlockNo" :myOrders[i].blockNumber,
+     "Type" :myOrders[i].orderType, 
+     "Receiver Name" :myReceivers[i].userName, 
+     "Receiver Address" :myReceivers[i].userFlatNo + "," + myReceivers[i].userLocality+"," +myReceivers[i].userCity+"-" +myReceivers[i].userPincode, "Receiver Ph" :myReceivers[i].userContactNo, "Supplier Name" :mySuppliers[i].userName, "Supplier Address" :mySuppliers[i].userFlatNo+"," +mySuppliers[i].userLocality+"," +mySuppliers[i].userCity+"-" +mySuppliers[i].userPincode, "Supplier Ph" :mySuppliers[i].userContactNo }) 
+}
+<!-- Function to convert JSON to CSV format -->
+let objectToCSV =(data)=>{
+    const csvRows = []
+    const headers = Object.keys(data[0])
+    csvRows.push(headers.join(','))
+    for (const row of data) {
+        const values = headers.map(header => {
+            const escaped = ('' + row[header]).replace(/"/g, '\\"')
+            return `"${escaped}"`
+        })
+        csvRows.push(values.join(','))
+    }
+    return csvRows.join('\n')
+}
+<!-- Function to download CSV on clcik -->
+let clickHandler=()=>{
+    let data=objectToCSV(csvData);
+    const blob=new Blob([data],{type:"text/csv"});
+    const url= window.URL.createObjectURL(blob);
+    const a=document.createElement('a');
+    a.setAttribute('hideen','');
+    a.setAttribute('href',url);
+    a.setAttribute('download','download.csv');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}

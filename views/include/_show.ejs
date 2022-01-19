@@ -1,0 +1,15 @@
+
+<% for(var i=0;i<orders.length;i++){ %>
+<tr>
+  <td><%= orders[i].orderItem.itemName %></td>
+  <td><%= orders[i].blockNumber %></td>
+  <td><%= orders[i].orderType %></td>
+  <td><%= receivers[i].userName %></td>
+  <td><%= receivers[i].userFlatNo+","+receivers[i].userLocality+","+receivers[i].userCity+"-"+receivers[i].userPincode %></td>
+  <td><%= receivers[i].userContactNo %></td>
+  <td><%= suppliers[i].userName %></td>
+  <td><%= suppliers[i].userFlatNo+","+suppliers[i].userLocality+","+suppliers[i].userCity+"-"+suppliers[i].userPincode %></td>
+  <td><%= suppliers[i].userContactNo %></td>
+  <td><a href="/order/<%=orders[i]._id %>/update"  ><button >Edit</button></a><a  href="/order/<%= orders[i]._id %>/delete?_method=DELETE"  ><button type="submit">  Delete</button></a></td>
+</tr>
+<% }%>

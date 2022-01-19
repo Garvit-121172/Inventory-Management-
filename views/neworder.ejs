@@ -1,0 +1,46 @@
+<%- include("include/_header") %>
+<form method="POST" action="/order/new" id="newOrder">
+  <div class="fromSubform">
+    <label>Item supplierName</label>
+    <input type="text" name="supplierName" >
+    <label>Item supplier Flat/Plot No:</label>
+    <input type="text" name="supplierFlatNo">
+    <label>Item supplier Localty</label>
+    <input type="text" name="supplierLocality">
+    <label>Item supplier City</label>
+    <input type="text" name="supplierCity" >
+    <label>Item supplier PinCode</label>
+    <input type="text" name="supplierPincode" >
+    <label>Item supplier Contact No:</label>
+    <input type="text" name="supplierContactNo" >
+  </div>
+  <div class="itemForm">
+    
+    <label>Item Name</label>
+    <input type="text" name="itemName">
+    <label>Item Weight</label>
+    <input type="number" name="itemWeight">
+    <label>Item Lenght</label>
+    <input type="number" name="itemLength">
+    <label>Item BReadth</label>
+    <input type="number" name="itemBreadth" >
+    <label>Item Height</label>
+    <input type="number"  name="itemHeight">
+  </div>
+  <div class="toSubform">
+    <label>Item Receiver Name</label>
+    <input type="text" name="receiverName"  >
+    <label>Item Receiver Flat/Plot No:</label>
+    <input type="text"  name="receiverFlatNo">
+    <label>Item Receiver Localty</label>
+    <input type="text" name="receiverLocality" >
+    <label>Item Receiver City</label>
+    <input type="text" name="receiverCity">
+    <label>Item Receiver PinCode</label>
+    <input type="text" name="receiverPincode">
+    <label>Item Receiver Contact No:</label>
+    <input type="text" name="receiverContactNo">
+  </div>
+  <button type="submit">Place ORder</button>
+</form>
+<%- include("include/_footer") %>

@@ -1,0 +1,49 @@
+<%- include("include/_header") %>
+<form  action="/order/update/?_method=PUT" method="post"id="updateOrder">
+  <div class="fromSubform">
+    <input type="text" name="supplierId" value="<%= supplier._id.toString() %>" hidden />
+    <label>Item supplierName</label>
+    <input type="text" name="supplierName" value="<%= supplier.userName %>"/>
+    <label>Item supplier Flat/Plot No:</label>
+    <input type="text" name="supplierFlatNo" value="<%= supplier.userFlatNo %>"/>
+    <label>Item supplier Localty</label>
+    <input type="text" name="supplierLocality"value="<%= supplier.userLocality %>"/>
+    <label>Item supplier City</label>
+    <input type="text" name="supplierCity" value="<%= supplier.userCity %>"/>
+    <label>Item supplier PinCode</label>
+    <input type="text" name="supplierPincode" value="<%= supplier.userPincode %>"/>
+    <label>Item supplier Contact No:</label>
+    <input type="text" name="supplierContactNo" value="<%= supplier.userContactNo %>"/>
+  </div>
+  <div class="itemForm">
+    <input type="text" name="orderId"  value="<%= order._id.toString() %>" hidden/>
+    <label>Item Name</label>
+    <input type="text" name="itemName" value="<%= order.orderItem.itemName %>"/>
+    <label>Item Weight</label>
+    <input type="number" name="itemWeight" value="<%= order.orderItem.itemWeight %>"/>
+    <label>Item Lenght</label>
+    <input type="number" name="itemLength" value="<%= order.orderItem.itemLength %>"/>
+    <label>Item BReadth</label>
+    <input type="number" name="itemBreadth" value="<%= order.orderItem.itemBreadth %>"/>
+    <label>Item Height</label>
+    <input type="number"  name="itemHeight" value="<%= order.orderItem.itemHeight %>"/>
+  </div>
+  <div class="toSubform">
+    <input type="text" name="receiverId"  value="<%= receiver._id.toString() %>" hidden />
+    <label>Item Receiver Name</label>
+    <input type="text" name="receiverName" value="<%= receiver.userName %>" />
+    <label>Item Receiver Flat/Plot No:</label>
+    <input type="text"  name="receiverFlatNo" value="<%= receiver.userFlatNo %>"/>
+    <label>Item Receiver Localty</label>
+    <input type="text" name="receiverLocality" value="<%= receiver.userLocality %>"/>
+    <label>Item Receiver City</label>
+    <input type="text" name="receiverCity" value="<%= receiver.userCity %>" />
+    <label>Item Receiver PinCode</label>
+    <input type="text" name="receiverPincode" value="<%= receiver.userPincode %>"/>
+    <label>Item Receiver Contact No:</label>
+    <input type="text" name="receiverContactNo" value="<%= receiver.userContactNo %>"/>
+  </div>
+  <button type="submit">Update ORder</button>
+</form>
+
+    <%- include("include/_footer") %>

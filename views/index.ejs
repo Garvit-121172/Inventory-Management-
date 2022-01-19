@@ -1,0 +1,33 @@
+<%- include("include/_header") %> 
+<form method="GET" action="/order/new/">
+  <button type="submit">Add</button>
+</form>
+<table id="inventory">
+  <tr>
+    <th>ItemName</th>
+    <th>BlockNo</th>
+    <th>Type</th>
+    <th>RecieverName</th>
+    <th>Receiver Address</th>
+    <th>Receiver Ph</th>
+    <th>SupplierName</th>
+    <th>Supplier Address</th>
+    <th>Sender Ph</th>
+    <th>Action</th>
+  </tr>
+  <%- include("include/_show") %>
+</table>
+<button id="download-btn">Download</button>
+<% let order=JSON.stringify(orders) %>
+<% let supplier=JSON.stringify(suppliers) %>
+<% let receiver=JSON.stringify(receivers)%>
+<script>
+    let myOrders= <%- order %>;
+    let mySuppliers= <%- supplier %>;
+    let myReceivers= <%- receiver %>;
+    let csvData=[];
+    <%- include("include/_helper"); %>
+    let btn=document.querySelector("#download-btn");
+    btn.addEventListener("click",clickHandler);
+</script>
+<%- include("include/_footer") %>
