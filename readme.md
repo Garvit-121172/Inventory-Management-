@@ -1,7 +1,7 @@
 
 # Inventory Management System
 
-This project is a tool to manage your inventory efficiently. It is build for a logistic domain firm. It allows you to do CRUD operations to your database. And apart from this you can also download a CSV file of your orders.
+- This project is a tool to manage your inventory efficiently. It is build for a logistic domain firm. It allows you to do CRUD operations to your database. And apart from this you can also download a CSV file of your orders.
 
 ## Stack Used:
 
@@ -37,6 +37,11 @@ This project is a tool to manage your inventory efficiently. It is build for a l
 
 - Dowload/Fork the repo.
 - Extract it on your local machine.
+- Replace `env.process.DB_URL`  variables in  `config/db.js` with
+```javascript
+"mongodb+srv://gk:1234@cluster0.8ro8q.mongodb.net/logisticsDb?retryWrites=true&w=majority"
+```  
+- Replace `env.process.PORT`  variables in  `index.js` with `3000`
 - Run these command in the project directory to install the required modules.
 
 ```bash
