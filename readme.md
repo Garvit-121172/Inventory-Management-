@@ -1,7 +1,7 @@
 
 # Inventory Management System
 
-- This project is a tool to manage your inventory efficiently. It is build for a logistic domain firm. It allows you to do CRUD operations to your database. And apart from this you can also download a CSV file of your orders.
+This project is a tool to manage your inventory efficiently. It is build for a logistic domain firm. It allows you to do CRUD operations to your database. And apart from this you can also download a CSV file of your orders.
 
 ## Stack Used:
 
