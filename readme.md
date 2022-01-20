@@ -50,7 +50,9 @@ npm start
 - Open any browser and got to loaclhost:3000/orders
 
 ### Functioning
+
 ***
+
 - The project begins with listing all the orders. Each order is associated with a Supplier , Receiver, Items/Goods to be deleiverd, Block Number (In which block is the order placed in the inventory. It is calculted on the basis of destination address of the order ) , Category (Based upon the item size and weight cateogory defines how does the good needs to transported ie. by Bike/Car/Mini-Truck/Truck).
 - CREATE: Click on the Add button to add a new orde. Fill in the details of the order in the form and submit.
 - READ: The order route displays all the orders on the database by default.
@@ -59,7 +61,9 @@ npm start
 - EXPORT: Click the download button on the order route to download CSV file of your orders.
 
 ### Future Contingency
+
 ***
+
 - Directly selecting an existing user(Supplier/Receiver) rather than filling all details of an existing user(Supplier/Receiver).
 - Searching/Sorting on varoius fields like based on destination pincode, supplier,category and even mixed combinations of these criteria.
 - Adding multiple items to a single order.
