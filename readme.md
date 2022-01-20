@@ -25,7 +25,7 @@
     MongoDB is very flexible to work with and provides NoSQL database features. It has high scalability ,easy to program and undersand. It is an open-sorce and is cheaper to use and maintain. It has excellent performance and availability.
 
 ### Pre-Requisites
-***
+---
 - NodeJs
 - MongoDB ATLAS / MongoDB
 
@@ -49,7 +49,7 @@ npm start
 
 ### Functioning
 
-***
+---
 
 - The project begins with listing all the orders. Each order is associated with a Supplier , Receiver, Items/Goods to be deleiverd, Block Number (In which block is the order placed in the inventory. It is calculted on the basis of destination address of the order ) , Category (Based upon the item size and weight cateogory defines how does the good needs to transported ie. by Bike/Car/Mini-Truck/Truck).
 - CREATE: Click on the Add button to add a new orde. Fill in the details of the order in the form and submit.
@@ -60,7 +60,7 @@ npm start
 
 ### Future Contingency
 
-***
+---
 
 - Directly selecting an existing user(Supplier/Receiver) rather than filling all details of an existing user(Supplier/Receiver).
 - Searching/Sorting on varoius fields like based on destination pincode, supplier,category and even mixed combinations of these criteria.
